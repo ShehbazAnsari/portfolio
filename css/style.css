@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+ul.navbar-nav>li>a {
+  border-bottom: 0px solid transparent;
+}
+
+ul.navbar-nav>li>a:hover {
+  color: #ffc107 !important;
+  background-color: transparent;
+  padding-bottom: 5px;
+  border-bottom: .5px #ffc107 solid;
+  transition: border-bottom .5s ease-in-out !important;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: url('/img/portfolioBg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
