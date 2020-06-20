@@ -29,11 +29,23 @@ body {
 
 }
 
-.layer {
+ .layer {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100%;
+}
+footer{
+  left:0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(255, 193, 7,0.3);
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+}
+footer p {
+  padding: 10px;
 }
