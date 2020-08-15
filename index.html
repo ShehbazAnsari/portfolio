@@ -92,8 +92,9 @@
         </div>
       </div>
     </div>
-    <footer>
-      <p>CopyRight &copy;, All Rights Resrved</p>
+  <!-- footer -->
+    <footer class="page-footer">
+      <p class="mt-2">&copy; <span id="year"></span> Copyright, All rights reserved.</p>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
@@ -103,6 +104,7 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
+    document.getElementById('year').innerHTML = new Date().getFullYear()
   </script>
 </body>
 
