@@ -29,7 +29,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark mt-4 animated slideInDown">
         <div class="d-flex">
           <a class="navbar-brand" href="#">
-            <i class="fas fa-code fa-2x text-light"></i>
+            <i class="fas fa-code fa-2x text-warning"></i>
           </a>
           <!-- <div class="d-flex flex-column border-right rounded-right border-warning">
             <span class="font-weight-light text-white font-weight-bold">Ansari</span>
@@ -50,8 +50,8 @@
               <a class="nav-link text-light" href="about.html">About Me</a>
             </li>
             <li class="nav-item mr-3">
-              <a class="nav-link text-light" href="experience.html">Experience</a>
-            </li>
+                <a class="nav-link text-light" href="experience.html">Experience</a>
+              </li>
             <li class="nav-item mr-3">
               <a class="nav-link text-light" href="project.html">Projects</a>
             </li>
@@ -66,33 +66,57 @@
       </nav>
       <div class="row">
         <div class="col-md-12 mt-4">
-          <h1 class="display-3 text-warning text-center animated swing">Contact Me</h1>
+          <h1 class="display-3 text-warning text-center animated swing">Experience</h1>
         </div>
       </div>
-      <div class="row mt-5 text-center">
-        <div class="col-md-6 mx-auto mt-5">
-          <div class="card bg-dark animated fadeInUp">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <h3 class="lead text-light"><span class="text-warning">Shehbaaz </span>Ansari</h3>
-                  <p class="text-light"><span class="text-warning">Software </span>Engineer</small>
-                </div>
-                <div class="col-md-6 mt-5">
-                  
-                    <p class="text-light"><span class="text-warning">Contact No: </span>9967715961</p>
-                    <small class="text-light"><span class="text-warning">Gmail: </span>shehbaz2499@gmail.com</small>
-                  
+      <div class="row mt-5" >
+        
+        <!-- JPMorgan Chase & Co. -->
+
+            <div class="col-md-4 mb-5">
+            <div class="card border-warning bg-light animated fadeInLeft mx-auto" style="width: 20rem;">
+                <img class="card-img-top" src="/img/jpmchasedp.png" alt="JPMorgan Logo">
+                <div class="card-body text-dark">
+                  <h3 class="lead mr-3">JPMorgan Chase & Co.</h3>
+                  <span class="card-title">Software Engineer II <small class="text-muted">- Full time</small></span>
+                  <p class="card-subtitle text-muted"><small> Nov 2022 - Present . <span id="total-time-in-company"></span> </small></p>
+                  <p class="card-subtitle text-muted"><small> Mumbai, Maharashtra , India - (Hybrid)</small></p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+
+          <!-- Quantiphi Analytics Solution Private Limited -->
+          
+            <div class="col-md-4 mb-5">
+            <div class="card border-warning bg-light animated fadeInUp mx-auto" style="width: 20rem;">
+                <img class="card-img-top" src="/img/quantiphiwallpaper.png" alt="Quantiphi Logo">
+                <div class="card-body text-dark">
+                  <h3 class="lead mr-3">Quantiphi Analytics</h3>
+                  <span class="card-title">Software Developer  <small class="text-muted">- Full time</small></span>
+                  <p class="card-subtitle text-muted"><small> Jun 2021 - Nov 2022 . 1 yr 6 mos</small></p>
+                  <p class="card-subtitle text-muted"><small> Mumbai, Maharashtra , India - (Remote)</small></p>
+                </div>
+              </div>
+            </div>
+          
+          <!--Synergistics Financial Network Private Limited  -->
+          
+            <div class="col-md-4 mb-5">
+            <div class="card border-warning bg-light animated fadeInRight mx-auto mb-5" style="width: 20rem;">
+                <img class="card-img-top" src="/img/mosambeeprofilephoto.png" alt="Mosambee Logo">
+                <div class="card-body text-dark">
+                  <h3 class="lead mr-3">Synergistic Financial Network</h3>
+                  <span class="card-title">Software Engineer <small class="text-muted">- Full time</small></span>
+                  <p class="card-subtitle text-muted"><small> Nov 2018 - Jun 2021 . 2 yrs 8 mos</small></p>
+                  <p class="card-subtitle text-muted"><small> Mumbai, Maharashtra , India - (On-site)</small></p>
+                </div>
+              </div>
+            </div>
       </div>
     </div>
   <!-- footer -->
   <footer class="page-footer small">
-    <p class="mt-2">&copy; <span id="year"></span> Copyright, All rights reserved.</p>
+    <p class="mt-1">&copy; <span id="year"></span> Copyright, All rights reserved.</p>
   </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
@@ -102,8 +126,13 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    document.getElementById('year').innerHTML = new Date().getFullYear()
+    document.getElementById('year').innerHTML = new Date().getFullYear();
+    
+    const calculateMonths = startDate => (new Date().getFullYear() - startDate.getFullYear()) 
+            * 12 + new Date().getMonth() - startDate.getMonth();
+    const startDate = new Date('2022-11-02'); 
+    const monthsInCompany = calculateMonths(startDate);
+    document.getElementById('total-time-in-company').innerHTML = monthsInCompany + " mos";
   </script>
 </body>
-
 </html>
